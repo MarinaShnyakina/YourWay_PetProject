@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">YourWay_PetProject</string>
+    <string name="app_name">YourWay</string>
+    <string name="app_in_name">Твой Путь</string>
+    <string name="description">Найди свой путь. Тебе в этом помогут коучинг и психология</string>
+    <string name="textBottom">Войдите в свою учетную запись</string>
+    <string name="come">Войти</string>
+    <string name="registration">Зарегистрироваться</string>
 </resources>

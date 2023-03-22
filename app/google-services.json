@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490095057345",
+    "project_id": "yourway-32a30",
+    "storage_bucket": "yourway-32a30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490095057345:android:a48227448660b1cab9f740",
+        "android_client_info": {
+          "package_name": "com.example.yourway_petproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490095057345-4lqfcuriun91a4t2f03jbefqcbvls2u7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwHSOosgsPxP5n5kiQS29DZm25Bk4CF5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490095057345-4lqfcuriun91a4t2f03jbefqcbvls2u7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,8 +1,10 @@
 package com.example.yourway_petproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -12,13 +14,12 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.example.yourway_petproject.Models.User;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.rengwuxian.materialedittext.MaterialEditText;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase db;
     DatabaseReference users;
-    RelativeLayout root;
+    // RelativeLayout root; у меня другой вывод ошибки
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnCome = findViewById(R.id.btnCome);
         btnRegister = findViewById(R.id.btnRegister);
 
-        root = findViewById(R.id.root_element);
+        // root = findViewById(R.id.root_element); у меня другой вывод ошибки
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
@@ -50,6 +51,68 @@ public class MainActivity extends AppCompatActivity {
                 showRegisterWindow();
             }
         });
+
+        btnCome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showComeWindow();
+            }
+        });
+    }
+
+    private void showComeWindow() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("Войти");
+        dialog.setMessage("Введите данные для входа");
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View comeWindow = inflater.inflate(R.layout.come_window, null);
+        dialog.setView(comeWindow);
+
+        email = comeWindow.findViewById(R.id.editTextEmailAddress);
+        password = comeWindow.findViewById(R.id.editTextPassword);
+
+        dialog.setNegativeButton("Отменить", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        dialog.setPositiveButton("Войти", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                if (TextUtils.isEmpty(email.getText().toString())) {
+                    // возможно вместо этого нужно будет написать
+                    // Snackbar.make(root, "сообщение", Snackbar.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Введите вашу почту", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (password.getText().toString().length() < 7) {
+                    Toast.makeText(MainActivity.this, "Введите пароль, который более 7 символов", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                //  Авторизация пользователя
+                auth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                            @Override
+                            public void onSuccess(AuthResult authResult) {
+                                startActivity(new Intent(MainActivity.this, MapActivity.class));
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(MainActivity.this, "Ошибка авторизации. " + e.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        });
+            }
+        });
+
+        dialog.show();
+
     }
 
     private void showRegisterWindow() {
@@ -94,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (password.getText().toString().length() < 7) {
-                    Toast.makeText(MainActivity.this, "Введите ваш пароль, который более 7 символов", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Введите пароль, который более 7 символов", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -109,16 +172,19 @@ public class MainActivity extends AppCompatActivity {
                                 user.setPassword(password.getText().toString());
                                 user.setPhone(phone.getText().toString());
 
-                                users.child(user.getEmail())
+                                users.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
-                                                Toast.makeText(MainActivity.this, "Пользователь добавлен!", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(MainActivity.this, "Пользователь добавлен!", Toast.LENGTH_LONG).show();
+                                            }
+                                        }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(MainActivity.this, "Такой пользователь уже существует. " + e.getMessage(), Toast.LENGTH_LONG).show();
                                             }
                                         });
-
-
                             }
                         });
 

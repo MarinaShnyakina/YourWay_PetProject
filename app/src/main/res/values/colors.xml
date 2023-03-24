@@ -11,4 +11,6 @@
     <color name="violet">#261734</color>
     <color name="back">#FADEC6</color>
     <color name="register">#C1A790</color>
+    <color name="backPersonalArea">#A7D1DF</color>
+    <color name="textService">#D15A5C</color>
 </resources>

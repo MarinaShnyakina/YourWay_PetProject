@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backPersonalArea"
+    tools:context=".PersonalArea">
+
+    <ImageView
+        android:id="@+id/imagePersonalArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="350dp"
+        app:srcCompat="@drawable/personalarea" />
+
+    <TextView
+        android:id="@+id/textService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="О сервисе"
+        android:textSize="30dp"
+        android:textColor="@color/textService"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aboutService"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textService"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="290dp"
+        android:text="@string/aboutService"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textService"
+        app:layout_constraintTop_toBottomOf="@+id/textService" />
+
+    <ImageView
+        android:id="@+id/iconPersonalArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/icons8____60" />
+
+    <TextView
+        android:id="@+id/textPersonalArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iconPersonalArea"
+        android:layout_alignBottom="@+id/iconPersonalArea"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@+id/iconPersonalArea"
+        android:text="Личный кабинет"
+        android:textColor="@color/textService"
+        android:textSize="16dp" />
+
+
+</RelativeLayout>

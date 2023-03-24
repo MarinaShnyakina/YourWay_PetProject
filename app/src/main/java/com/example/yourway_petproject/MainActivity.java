@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.example.yourway_petproject.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                startActivity(new Intent(MainActivity.this, MapActivity.class));
+                                startActivity(new Intent(MainActivity.this, MenuActivity.class));
                                 finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {

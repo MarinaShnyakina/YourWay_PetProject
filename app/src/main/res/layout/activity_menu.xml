@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageBooks"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="84dp"
+        android:src="@drawable/books"
+        app:layout_constraintBottom_toTopOf="@+id/imageArticles"
+        app:layout_constraintEnd_toStartOf="@+id/imageSpecial" />
+
+    <TextView
+        android:id="@+id/textSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Специалисты"
+        android:textSize="17dp"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toEndOf="@+id/imageSpecial"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="@+id/imageSpecial"
+        app:layout_constraintTop_toBottomOf="@+id/imageSpecial" />
+
+    <ImageView
+        android:id="@+id/imageSpecial"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="84dp"
+        android:src="@drawable/special"
+        app:layout_constraintBottom_toTopOf="@+id/imageCourses"
+        app:layout_constraintEnd_toEndOf="@id/imageCourses" />
+
+    <TextView
+        android:id="@+id/textBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Книги"
+        android:textSize="17dp"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toEndOf="@+id/imageBooks"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="@+id/imageBooks"
+        app:layout_constraintTop_toBottomOf="@+id/imageBooks" />
+
+    <ImageView
+        android:id="@+id/imageCourses"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="84dp"
+        android:src="@drawable/courses"
+        app:layout_constraintBottom_toTopOf="@+id/imageService"
+        app:layout_constraintEnd_toEndOf="@id/imageService" />
+
+    <TextView
+        android:id="@+id/textCourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
+        android:text="Курсы и мастер классы"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toEndOf="@+id/imageCourses"
+        app:layout_constraintStart_toStartOf="@+id/imageCourses"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintTop_toBottomOf="@id/imageCourses"/>
+
+    <ImageView
+        android:id="@+id/imageArticles"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="84dp"
+        android:src="@drawable/articles"
+        app:layout_constraintBottom_toTopOf="@+id/imageGlider"
+        app:layout_constraintEnd_toStartOf="@+id/imageCourses" />
+
+    <TextView
+        android:id="@+id/textArticles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Статьи"
+        android:textSize="17dp"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toEndOf="@+id/imageArticles"
+        app:layout_constraintStart_toStartOf="@+id/imageArticles"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintTop_toBottomOf="@id/imageArticles"/>
+
+    <ImageView
+        android:id="@+id/imageGlider"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/glider"
+        app:layout_constraintBottom_toBottomOf="@id/imageService"
+        app:layout_constraintEnd_toStartOf="@+id/imageService" />
+
+    <TextView
+        android:id="@+id/textGlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Планер"
+        android:textSize="17dp"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toEndOf="@+id/imageGlider"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="@+id/imageGlider"
+        app:layout_constraintTop_toBottomOf="@id/imageGlider" />
+
+    <ImageView
+        android:id="@+id/imageService"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageGlider" />
+
+    <TextView
+        android:id="@+id/textService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="О сервисе"
+        android:textSize="17dp"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toEndOf="@+id/imageService"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="@+id/imageService"
+        app:layout_constraintTop_toBottomOf="@id/imageService" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

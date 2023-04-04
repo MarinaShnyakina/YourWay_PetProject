@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backPersonalArea"
-    tools:context=".PersonalArea">
+    tools:context=".AboutService.AboutService">
 
     <ImageView
         android:id="@+id/imagePersonalArea"
@@ -33,22 +33,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textService"
         android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="290dp"
         android:text="@string/aboutService"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/textService"
         app:layout_constraintTop_toBottomOf="@+id/textService" />
-
-    <ImageView
-        android:id="@+id/iconPersonalArea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        app:srcCompat="@drawable/icons8____60" />
 
     <TextView
         android:id="@+id/textPersonalArea"
@@ -63,6 +54,16 @@
         android:text="Личный кабинет"
         android:textColor="@color/textService"
         android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/iconPersonalArea"
+        android:layout_width="86dp"
+        android:layout_height="61dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/id_card" />
 
 
 </RelativeLayout>

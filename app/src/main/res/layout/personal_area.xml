@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backPersonalArea">
+
+    <TextView
+        android:id="@+id/textExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Выйти"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/textDeleteProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textExit"
+        android:layout_alignBottom="@+id/textExit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:text="Удалить профиль"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/textProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:text="Профиль и настройки"
+        android:textColor="@color/textService"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:id="@+id/personArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textProfile"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/editTextAreaPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Имя: " />
+
+        <EditText
+            android:id="@+id/editTextAreaPhone"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="Телефон: " />
+
+        <EditText
+            android:id="@+id/editTextAreaEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="Email: " />
+
+        <EditText
+            android:id="@+id/editTextAreaDate"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:inputType="date"
+            android:text="Дата рождения: " />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchNotifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personArea"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:checked="true"
+        android:text="@string/notifi"
+        android:textSize="20dp"
+        android:theme="@style/MySwitch" />
+
+    <TextView
+        android:id="@+id/textNotifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchNotifi"
+        android:layout_alignStart="@+id/switchNotifi"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/textNotift"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+
+</RelativeLayout>

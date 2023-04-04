@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
-import com.google.firebase.auth.AuthResult;
+import com.example.yourway_petproject.AboutService.AboutService;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -29,13 +28,13 @@ public class MenuActivity extends AppCompatActivity {
         btnService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showServiceAndPersonalArea();
+                showAboutService();
             }
         });
     }
 
-    private void showServiceAndPersonalArea() {
-            startActivity(new Intent(MenuActivity.this, PersonalArea.class));
+    public void showAboutService() {
+            startActivity(new Intent(MenuActivity.this, AboutService.class));
             finish();
 
     }

@@ -12,7 +12,10 @@
         android:theme="@style/Theme.YourWay_PetProject"
         tools:targetApi="31">
         <activity
-            android:name=".PersonalArea"
+            android:name=".AboutService.PersonalArea"
+            android:exported="false"/>
+        <activity
+            android:name=".AboutService.AboutService"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"

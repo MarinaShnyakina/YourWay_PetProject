@@ -12,10 +12,25 @@
         android:theme="@style/Theme.YourWay_PetProject"
         tools:targetApi="31">
         <activity
-            android:name=".AboutService.PersonalArea"
-            android:exported="false"/>
+            android:name=".Menu.Glider"
+            android:exported="false" />
         <activity
-            android:name=".AboutService.AboutService"
+            android:name=".Menu.Articles"
+            android:exported="false" />
+        <activity
+            android:name=".Menu.Courses"
+            android:exported="false" />
+        <activity
+            android:name=".Menu.Special"
+            android:exported="false" />
+        <activity
+            android:name=".Menu.Books"
+            android:exported="false" />
+        <activity
+            android:name=".AboutService.PersonalArea"
+            android:exported="false" />
+        <activity
+            android:name=".Menu.AboutService"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"

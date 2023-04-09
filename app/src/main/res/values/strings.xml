@@ -15,4 +15,32 @@
     </string>
     <string name="notifi">Уведомления от сервиса</string>
     <string name="textNotift">Напоминание о сессии, новые сообщения от психолога или службы поддержки.</string>
+    <string name="service">О сервисе</string>
+    <string name="persArea">Личный кабинет</string>
+    <string name="special">Специалисты</string>
+    <string name="books">Книги</string>
+    <string name="courses">Курсы и мастер классы</string>
+    <string name="articles">Статьи</string>
+    <string name="glider">Планер</string>
+    <string name="saveData">Запомнить данные</string>
+    <string name="exit">Выйти</string>
+    <string name="deleteProfile">Удалить профиль</string>
+    <string name="profile">Профиль и настройки</string>
+    <string name="save">Сохранить</string>
+    <string name="name">Имя: </string>
+    <string name="phone">Телефон: </string>
+    <string name="email">Email: </string>
+    <string name="areaDate">Дата рождения: </string>
+    <string name="pass">Пароль: </string>
+    <string name="city">Город: </string>
+    <string name="task">Задача</string>
+    <string name="textTask">Ставь любые задачи и небольшие цели из всех сфер жизни, которые ты хочешь выполнить.</string>
+    <string name="alarm">Будильник</string>
+    <string name="textAlarm">Устанавливай мотивационные сигналы, чтобы просыпаться быстро и легко.</string>
+    <string name="monitoring">Мониторинг</string>
+    <string name="textMonitoring">Контролируй свои эмоции и чувства с любой периодичностью.</string>
+    <string name="beliefs">Убеждения</string>
+    <string name="textBeliefs">Программируй свое подсознание систематически, как тебе удобно.</string>
+
 </resources>
+

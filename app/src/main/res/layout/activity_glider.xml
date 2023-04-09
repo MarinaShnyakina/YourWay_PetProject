@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back"
+    tools:context=".Menu.Glider">
+
+    <ImageView
+        android:id="@+id/imageTask"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/taks" />
+
+    <TextView
+        android:id="@+id/textTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@+id/imageTask"
+        app:layout_constraintTop_toTopOf="@+id/imageTask"
+        android:text="@string/task"
+        android:textColor="@color/violet"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textTextTask"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/textTask"
+        android:textColor="@color/violet"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/imageTask"
+        app:layout_constraintTop_toBottomOf="@+id/textTask" />
+
+    <ImageView
+        android:id="@+id/imageAlarm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTask"
+        app:srcCompat="@drawable/alarm" />
+
+    <TextView
+        android:id="@+id/textAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@+id/imageAlarm"
+        app:layout_constraintTop_toTopOf="@+id/imageAlarm"
+        android:text="@string/alarm"
+        android:textColor="@color/violet"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textTextAlarm"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/textAlarm"
+        android:textColor="@color/violet"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/imageAlarm"
+        app:layout_constraintTop_toBottomOf="@+id/textAlarm" />
+
+    <ImageView
+        android:id="@+id/imageBeliefs"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageAlarm"
+        app:srcCompat="@drawable/beliefs" />
+
+    <TextView
+        android:id="@+id/textBeliefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@+id/imageBeliefs"
+        app:layout_constraintTop_toTopOf="@+id/imageBeliefs"
+        android:text="@string/beliefs"
+        android:textColor="@color/violet"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textTextBeliefs"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/textBeliefs"
+        android:textColor="@color/violet"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/imageBeliefs"
+        app:layout_constraintTop_toBottomOf="@+id/textBeliefs" />
+
+    <ImageView
+        android:id="@+id/imageMonitoring"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBeliefs"
+        app:srcCompat="@drawable/monitoring" />
+
+    <TextView
+        android:id="@+id/textMonitoring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@+id/imageMonitoring"
+        app:layout_constraintTop_toTopOf="@+id/imageMonitoring"
+        android:text="@string/monitoring"
+        android:textColor="@color/violet"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textTextMonitoring"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/textMonitoring"
+        android:textColor="@color/violet"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/imageMonitoring"
+        app:layout_constraintTop_toBottomOf="@+id/textMonitoring" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

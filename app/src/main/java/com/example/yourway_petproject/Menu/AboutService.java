@@ -1,4 +1,4 @@
-package com.example.yourway_petproject.AboutService;
+package com.example.yourway_petproject.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,22 +8,23 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.yourway_petproject.AboutService.PersonalArea;
 import com.example.yourway_petproject.R;
 
 public class AboutService extends AppCompatActivity {
 
-    TextView btnTextPersonalArea;
-    ImageView btnIconPersonalArea;
+    TextView textPersonalArea;
+    ImageView iconPersonalArea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_service);
 
-        btnTextPersonalArea = findViewById(R.id.textPersonalArea);
-        btnIconPersonalArea = findViewById(R.id.iconPersonalArea);
+        textPersonalArea = findViewById(R.id.textPersonalArea);
+        iconPersonalArea = findViewById(R.id.iconPersonalArea);
 
-        btnTextPersonalArea.setOnClickListener(new View.OnClickListener() {
+        textPersonalArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showPersonalArea();
@@ -33,6 +34,5 @@ public class AboutService extends AppCompatActivity {
 
     public void showPersonalArea() {
         startActivity(new Intent(AboutService.this, PersonalArea.class));
-        finish();
     }
 }

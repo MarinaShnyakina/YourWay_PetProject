@@ -13,4 +13,6 @@
     <color name="register">#C1A790</color>
     <color name="backPersonalArea">#A7D1DF</color>
     <color name="textService">#D15A5C</color>
+    <color name="backPsych">#FEF5CC</color>
+    <color name="backCoach">#DBDBDB</color>
 </resources>

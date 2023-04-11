@@ -41,6 +41,17 @@
     <string name="textMonitoring">Контролируй свои эмоции и чувства с любой периодичностью.</string>
     <string name="beliefs">Убеждения</string>
     <string name="textBeliefs">Программируй свое подсознание систематически, как тебе удобно.</string>
+    <string name="courseGoalSetting">Целеполагание</string>
+    <string name="courseAcceptanceOfEmotions">Принятие эмоций</string>
+    <string name="courseImpostorSyndrome">Синдром самозванца</string>
+    <string name="courseSelfLove">Любовь к себе</string>
+    <string name="coursesResourses">Ресурсы</string>
+    <string name="filter">Фильтр</string>
+    <string name="online">Онлайн</string>
+    <string name="offline">Офлайн</string>
+    <string name="coach">Коучинг</string>
+    <string name="psych">Психология</string>
+    <string name="backTextCategory">backTextCategory</string>
 
 </resources>
 

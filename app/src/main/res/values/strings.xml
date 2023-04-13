@@ -52,6 +52,9 @@
     <string name="coach">Коучинг</string>
     <string name="psych">Психология</string>
     <string name="backTextCategory">backTextCategory</string>
+    <string name="courseStartData">Дата начала: </string>
+    <string name="courseFormat">Формат / Город:  </string>
+    <string name="coursePrice">Стоимость: </string>
 
 </resources>
 

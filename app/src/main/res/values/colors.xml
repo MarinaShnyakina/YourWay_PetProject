@@ -15,4 +15,5 @@
     <color name="textService">#D15A5C</color>
     <color name="backPsych">#FEF5CC</color>
     <color name="backCoach">#DBDBDB</color>
+    <color name="backCourseGoalSetting">#D7D9FD</color>
 </resources>

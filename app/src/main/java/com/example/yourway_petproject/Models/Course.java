@@ -1,17 +1,18 @@
 package com.example.yourway_petproject.Models;
 
-public class Courses {
+public class Course {
 
     int id;
-    String img, title, date, city, price;
+    String img, title, date, format, price, color;
 
-    public Courses(int id, String img, String title, String date, String city, String price) {
+    public Course(int id, String img, String title, String date, String format, String price, String color) {
         this.id = id;
         this.img = img;
         this.title = title;
         this.date = date;
-        this.city = city;
+        this.format = format;
         this.price = price;
+        this.color = color;
     }
 
     public int getId() {
@@ -46,12 +47,12 @@ public class Courses {
         this.date = date;
     }
 
-    public String getCity() {
-        return city;
+    public String getFormat() {
+        return format;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setFormat(String format) {
+        this.format = format;
     }
 
     public String getPrice() {
@@ -60,5 +61,13 @@ public class Courses {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

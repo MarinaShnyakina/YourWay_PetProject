@@ -55,6 +55,8 @@
     <string name="courseStartData">Дата начала: </string>
     <string name="courseFormat">Формат / Город:  </string>
     <string name="coursePrice">Стоимость: </string>
+    <string name="buttonAddCourse">Добавить в корзину</string>
+    <string name="coursePageDesc">Тут будет красивое описание курса, чтобы люди могли понять о чем идет речь и захотели на него записаться.</string>
 
 </resources>
 

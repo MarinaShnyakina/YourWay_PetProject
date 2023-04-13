@@ -27,6 +27,7 @@
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:contentDescription="@string/courseGoalSetting"
+                android:transitionName="courseImage"
                 app:srcCompat="@drawable/coursegoalsetting" />
 
             <TextView

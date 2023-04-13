@@ -3,9 +3,9 @@ package com.example.yourway_petproject.Models;
 public class Course {
 
     int id;
-    String img, title, date, format, price, color;
+    String img, title, date, format, price, color, textPage;
 
-    public Course(int id, String img, String title, String date, String format, String price, String color) {
+    public Course(int id, String img, String title, String date, String format, String price, String color, String textPage) {
         this.id = id;
         this.img = img;
         this.title = title;
@@ -13,6 +13,7 @@ public class Course {
         this.format = format;
         this.price = price;
         this.color = color;
+        this.textPage = textPage;
     }
 
     public int getId() {
@@ -69,5 +70,13 @@ public class Course {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getTextPage() {
+        return textPage;
+    }
+
+    public void setTextPage(String textPage) {
+        this.textPage = textPage;
     }
 }

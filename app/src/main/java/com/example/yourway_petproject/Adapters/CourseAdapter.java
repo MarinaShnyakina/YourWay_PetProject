@@ -1,19 +1,23 @@
 package com.example.yourway_petproject.Adapters;
 
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.yourway_petproject.Courses.CoursePage;
 import com.example.yourway_petproject.Models.Course;
 import com.example.yourway_petproject.R;
 
@@ -47,6 +51,26 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
         holder.courseDate.setText(courses.get(position).getDate());
         holder.courseFormat.setText(courses.get(position).getFormat());
         holder.coursePrice.setText(courses.get(position).getPrice());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CoursePage.class);
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
+                        (Activity) context, new Pair<View, String>(holder.courseImage, "courseImage"));
+
+                intent.putExtra("courseBack", Color.parseColor(courses.get(position).getColor()));
+                intent.putExtra("courseImage", imageId);
+                intent.putExtra("courseTitle", courses.get(position).getTitle());
+                intent.putExtra("courseDate", courses.get(position).getDate());
+                intent.putExtra("courseFormat", courses.get(position).getFormat());
+                intent.putExtra("coursePrice", courses.get(position).getPrice());
+                intent.putExtra("courseTextPage", courses.get(position).getTextPage());
+
+                context.startActivity(intent, options.toBundle());
+            }
+        });
     }
 
     @Override

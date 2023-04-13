@@ -12,6 +12,9 @@
         android:theme="@style/Theme.YourWay_PetProject"
         tools:targetApi="31">
         <activity
+            android:name=".Courses.CoursePage"
+            android:exported="false" />
+        <activity
             android:name=".Menu.Glider"
             android:exported="false" />
         <activity

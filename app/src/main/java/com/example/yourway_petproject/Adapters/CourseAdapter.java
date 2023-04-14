@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.yourway_petproject.Courses.CoursePage;
+import com.example.yourway_petproject.Menu.Courses.CoursePage;
 import com.example.yourway_petproject.Models.Course;
 import com.example.yourway_petproject.R;
 
@@ -63,10 +63,11 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
                 intent.putExtra("courseBack", Color.parseColor(courses.get(position).getColor()));
                 intent.putExtra("courseImage", imageId);
                 intent.putExtra("courseTitle", courses.get(position).getTitle());
-                intent.putExtra("courseDate", courses.get(position).getDate());
-                intent.putExtra("courseFormat", courses.get(position).getFormat());
-                intent.putExtra("coursePrice", courses.get(position).getPrice());
-                intent.putExtra("courseTextPage", courses.get(position).getTextPage());
+                intent.putExtra("dateCoursePage", courses.get(position).getDate());
+                intent.putExtra("formatCoursePage", courses.get(position).getFormat());
+                intent.putExtra("priceCoursePage", courses.get(position).getPrice());
+                intent.putExtra("textCoursePage", courses.get(position).getTextPage());
+                intent.putExtra("courseId", courses.get(position).getId());
 
                 context.startActivity(intent, options.toBundle());
             }

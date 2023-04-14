@@ -2,11 +2,12 @@ package com.example.yourway_petproject.Models;
 
 public class Course {
 
-    int id;
+    int id, category;
     String img, title, date, format, price, color, textPage;
 
-    public Course(int id, String img, String title, String date, String format, String price, String color, String textPage) {
+    public Course(int id, int category, String img, String title, String date, String format, String price, String color, String textPage) {
         this.id = id;
+        this.category = category;
         this.img = img;
         this.title = title;
         this.date = date;
@@ -22,6 +23,14 @@ public class Course {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public String getImg() {

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_centerInParent="true"
-    tools:context=".Menu.Special">
+    tools:context=".Menu.Special.Special">
 
 
     <ImageView

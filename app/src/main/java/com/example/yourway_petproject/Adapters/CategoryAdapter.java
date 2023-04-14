@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.yourway_petproject.Menu.Courses.Courses;
 import com.example.yourway_petproject.Models.Category;
 import com.example.yourway_petproject.R;
 
@@ -35,6 +36,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         holder.categoryTitle.setText(categories.get(position).getTitle());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Courses.showCoursesByCategory(categories.get(position).getId());
+
+            }
+        });
     }
 
     @Override

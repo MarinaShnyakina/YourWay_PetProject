@@ -1,4 +1,4 @@
-package com.example.yourway_petproject.Menu;
+package com.example.yourway_petproject.Menu.Articles;
 
 import androidx.appcompat.app.AppCompatActivity;
 

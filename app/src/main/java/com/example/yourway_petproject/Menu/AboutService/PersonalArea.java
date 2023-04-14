@@ -1,4 +1,4 @@
-package com.example.yourway_petproject.AboutService;
+package com.example.yourway_petproject.Menu.AboutService;
 
 import android.os.Bundle;
 

@@ -12,31 +12,34 @@
         android:theme="@style/Theme.YourWay_PetProject"
         tools:targetApi="31">
         <activity
-            android:name=".Courses.CoursePage"
+            android:name=".Menu.Courses.OrderPage"
             android:exported="false" />
         <activity
-            android:name=".Menu.Glider"
+            android:name=".Menu.Courses.CoursePage"
             android:exported="false" />
         <activity
-            android:name=".Menu.Articles"
+            android:name=".Menu.Glider.Glider"
             android:exported="false" />
         <activity
-            android:name=".Menu.Courses"
+            android:name=".Menu.Articles.Articles"
             android:exported="false" />
         <activity
-            android:name=".Menu.Special"
+            android:name=".Menu.Courses.Courses"
             android:exported="false" />
         <activity
-            android:name=".Menu.Books"
+            android:name=".Menu.Special.Special"
             android:exported="false" />
         <activity
-            android:name=".AboutService.PersonalArea"
+            android:name=".Menu.Books.Books"
             android:exported="false" />
         <activity
-            android:name=".Menu.AboutService"
+            android:name=".Menu.AboutService.PersonalArea"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".Menu.AboutService.AboutService"
+            android:exported="false" />
+        <activity
+            android:name=".Menu.MenuActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

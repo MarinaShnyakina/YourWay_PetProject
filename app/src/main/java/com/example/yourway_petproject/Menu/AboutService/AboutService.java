@@ -1,4 +1,4 @@
-package com.example.yourway_petproject.Menu;
+package com.example.yourway_petproject.Menu.AboutService;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.yourway_petproject.AboutService.PersonalArea;
 import com.example.yourway_petproject.R;
 
 public class AboutService extends AppCompatActivity {

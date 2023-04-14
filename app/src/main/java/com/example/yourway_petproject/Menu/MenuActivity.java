@@ -1,4 +1,4 @@
-package com.example.yourway_petproject;
+package com.example.yourway_petproject.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.yourway_petproject.Menu.AboutService;
-import com.example.yourway_petproject.Menu.Articles;
-import com.example.yourway_petproject.Menu.Books;
-import com.example.yourway_petproject.Menu.Courses;
-import com.example.yourway_petproject.Menu.Glider;
-import com.example.yourway_petproject.Menu.Special;
+import com.example.yourway_petproject.Menu.AboutService.AboutService;
+import com.example.yourway_petproject.Menu.Articles.Articles;
+import com.example.yourway_petproject.Menu.Books.Books;
+import com.example.yourway_petproject.Menu.Courses.Courses;
+import com.example.yourway_petproject.Menu.Glider.Glider;
+import com.example.yourway_petproject.Menu.Special.Special;
+import com.example.yourway_petproject.R;
 
 public class MenuActivity extends AppCompatActivity {
 

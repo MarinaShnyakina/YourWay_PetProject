@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/back"
-    tools:context=".Menu.Glider">
+    tools:context=".Menu.Glider.Glider">
 
     <ImageView
         android:id="@+id/imageTask"
@@ -31,7 +31,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/textTextTask"
+        android:id="@+id/textDescTask"
         android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
@@ -64,7 +64,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/textTextAlarm"
+        android:id="@+id/textDescAlarm"
         android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
@@ -97,7 +97,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/textTextBeliefs"
+        android:id="@+id/textDescBeliefs"
         android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
@@ -130,7 +130,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/textTextMonitoring"
+        android:id="@+id/textDescMonitoring"
         android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"

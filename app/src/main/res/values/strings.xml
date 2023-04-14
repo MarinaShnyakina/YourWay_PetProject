@@ -45,7 +45,7 @@
     <string name="courseAcceptanceOfEmotions">Принятие эмоций</string>
     <string name="courseImpostorSyndrome">Синдром самозванца</string>
     <string name="courseSelfLove">Любовь к себе</string>
-    <string name="coursesResourses">Ресурсы</string>
+    <string name="coursesResourses">Я в ресурсе</string>
     <string name="filter">Фильтр</string>
     <string name="online">Онлайн</string>
     <string name="offline">Офлайн</string>
@@ -56,6 +56,7 @@
     <string name="courseFormat">Формат / Город:  </string>
     <string name="coursePrice">Стоимость: </string>
     <string name="buttonAddCourse">Добавить в корзину</string>
+    <string name="cart">Корзина</string>
     <string name="coursePageDesc">Тут будет красивое описание курса, чтобы люди могли понять о чем идет речь и захотели на него записаться.</string>
 
 </resources>

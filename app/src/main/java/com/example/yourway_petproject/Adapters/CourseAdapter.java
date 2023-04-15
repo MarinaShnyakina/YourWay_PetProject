@@ -17,7 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.yourway_petproject.Menu.Courses.CoursePage;
+
+import com.example.yourway_petproject.Courses.CoursePage;
 import com.example.yourway_petproject.Models.Course;
 import com.example.yourway_petproject.R;
 

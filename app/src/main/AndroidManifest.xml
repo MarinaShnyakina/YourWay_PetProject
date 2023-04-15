@@ -15,7 +15,7 @@
             android:name=".Menu.Courses.OrderPage"
             android:exported="false" />
         <activity
-            android:name=".Menu.Courses.CoursePage"
+            android:name=".Courses.CoursePage"
             android:exported="false" />
         <activity
             android:name=".Menu.Glider.Glider"

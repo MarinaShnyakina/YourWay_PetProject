@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
+
+
                 //  Авторизация пользователя
                 auth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {

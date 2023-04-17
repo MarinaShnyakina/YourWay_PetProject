@@ -19,6 +19,7 @@ import java.util.List;
 
 public class Courses extends AppCompatActivity {
 
+    private static int category;
     RecyclerView categoryRecycler, courseRecycler;
     CategoryAdapter categoryAdapter;
     static CourseAdapter courseAdapter;
@@ -108,6 +109,7 @@ public class Courses extends AppCompatActivity {
     }
 
     public static void showCoursesByCategory(int category) {
+        Courses.category = category;
 
         courseList.clear();
         courseList.addAll(fullCoursesList);

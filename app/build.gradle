@@ -6,71 +6,93 @@ android {
     namespace 'com.example.yourway_petproject'
     compileSdk 33
 
+    flavorDimensions "default"
+
     buildscript {
-        dependencies {
-            classpath 'com.google.gms:google-services:4.3.15'
-            classpath 'com.android.tools.build:gradle:3.3.0-alpha08'
-            classpath 'org.robolectric:robolectric-gradle-plugin:0.14.'
+        ext.kotlin_version = "1.4.21"
+        ext.hilt_version = "2.28-alpha"
+        repositories {
+            google()
+            mavenCentral()
+            dependencies {
+                classpath 'com.google.gms:google-services:4.3.15'
+                classpath 'com.android.tools.build:gradle:7.4.2'
+                classpath 'org.robolectric:robolectric-gradle-plugin:0.14.'
+                classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30'
+            }
+        }
+
+        defaultConfig {
+            applicationId "com.example.yourway_petproject"
+            minSdk 24
+            targetSdk 33
+            versionCode 1
+            versionName "1.0"
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+
+        productFlavors {
+            staging {
+                applicationIdSuffix ".staging"
+                buildConfigField 'String', 'GOOGLE_APIS_ENDPOINT', '"https://www.googleapis.com/"'
+
+            }
+
+            prod {
+                buildConfigField 'String', 'GOOGLE_APIS_ENDPOINT', '"https://www.googleapis.com/"'
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
         }
     }
 
-    defaultConfig {
-        applicationId "com.example.yourway_petproject"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+    dependencies {
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation 'com.google.android.material:material:1.8.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+        implementation 'com.google.firebase:firebase-auth:21.3.0'
+        implementation 'com.google.firebase:firebase-database:20.2.0'
+        implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+        implementation 'com.google.firebase:firebase-firestore:24.5.0'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    android {
+        testOptions {
+            unitTests {
+                includeAndroidResources = true
+            }
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+
+    dependencies {
+        testImplementation 'junit:junit:4.13.2'
+        testImplementation 'org.robolectric:robolectric:4.9'
     }
-}
 
-dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-auth:21.2.0'
-    implementation 'com.google.firebase:firebase-database:20.1.0'
-    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
-    implementation 'com.google.firebase:firebase-firestore:24.4.5'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    apply plugin: 'com.android.application'
 
-}
-
-android {
-    testOptions {
-        unitTests {
-            includeAndroidResources = true
-        }
+    android {
     }
+
+    dependencies {
+        implementation 'com.google.firebase:firebase-core:21.1.1'
+    }
+
+    apply plugin: 'com.google.gms.google-services'
 }
-
-dependencies {
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.robolectric:robolectric:4.9'
-}
-
-
-apply plugin: 'com.android.application'
-
-android {
-}
-
-dependencies {
-    implementation 'com.google.firebase:firebase-core:21.1.1'
-}
-
-apply plugin: 'com.google.gms.google-services'

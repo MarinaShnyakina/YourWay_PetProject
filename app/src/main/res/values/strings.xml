@@ -51,6 +51,7 @@
     <string name="buttonAddCourse">Добавить в корзину</string>
     <string name="cart">Корзина</string>
     <string name="coursePageDesc">Тут будет красивое описание курса, чтобы люди могли понять о чем идет речь и захотели на него записаться.</string>
+    <string name="anErrorHasOccurred">An error has occurred: %1$s</string>
 
 </resources>
 

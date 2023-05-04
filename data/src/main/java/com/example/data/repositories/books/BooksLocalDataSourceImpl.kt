@@ -22,7 +22,7 @@ class BooksLocalDataSourceImpl(
     }
 
     override suspend fun getBookmarks(): Flow<List<Volume>> {
-        val savedBooksFlow = bookDao.getSavedBooks()
+        val savedBooksFlow = bookDao.getSaveBook()
         return savedBooksFlow.map { list ->
             list.map { element ->
                 bookEntityMapper.toVolume(element)

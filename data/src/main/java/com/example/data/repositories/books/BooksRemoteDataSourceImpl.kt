@@ -18,7 +18,7 @@ class BooksRemoteDataSourceImpl(
                 if (response.isSuccessful) {
                     return@withContext Result.Success(mapper.toVolumeList(response.body()!!))
                 } else {
-                    return@withContext Result.Error(Exception(response.massage()))
+                    return@withContext Result.Error(Exception(response.message()))
                 }
             } catch (e: Exception) {
                 return@withContext Result.Error(e)

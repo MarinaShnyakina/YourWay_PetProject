@@ -28,6 +28,7 @@ public class OrderPage extends AppCompatActivity {
                 coursesTitle.add(c.getTitle());
         }
 
-        ordersList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, Order.itemsId.toArray()));
+        ordersList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, coursesTitle));
+
     }
 }

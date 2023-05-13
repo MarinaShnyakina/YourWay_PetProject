@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase db;
     DatabaseReference users;
-    // RelativeLayout root; у меня другой вывод ошибки
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnCome = findViewById(R.id.btnCome);
         btnRegister = findViewById(R.id.btnRegister);
-
-        // root = findViewById(R.id.root_element); у меня другой вывод ошибки
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
@@ -84,8 +82,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 if (TextUtils.isEmpty(email.getText().toString())) {
-                    // возможно вместо этого нужно будет написать
-                    // Snackbar.make(root, "сообщение", Snackbar.LENGTH_SHORT).show();
                     Toast.makeText(MainActivity.this, "Введите вашу почту", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -143,8 +139,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 if (TextUtils.isEmpty(email.getText().toString())) {
-                    // возможно вместо этого нужно будет написать
-                    // Snackbar.make(root, "сообщение", Snackbar.LENGTH_SHORT).show();
                     Toast.makeText(MainActivity.this, "Введите вашу почту", Toast.LENGTH_SHORT).show();
                     return;
                 }

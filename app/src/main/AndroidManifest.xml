@@ -9,6 +9,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.YourWay_PetProject"
@@ -18,7 +19,7 @@
             android:name=".Menu.Courses.OrderPage"
             android:exported="false" />
         <activity
-            android:name=".Courses.CoursePage"
+            android:name=".Menu.Courses.CoursePage"
             android:exported="false" />
         <activity
             android:name=".Menu.Glider.Glider"
@@ -49,7 +50,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

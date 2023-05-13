@@ -1,6 +1,7 @@
 package com.example.yourway_petproject.Adapters;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
@@ -17,8 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import com.example.yourway_petproject.Courses.CoursePage;
+import com.example.yourway_petproject.Menu.Courses.CoursePage;
 import com.example.yourway_petproject.Models.Course;
 import com.example.yourway_petproject.R;
 
@@ -42,7 +42,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CourseViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CourseViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.courseBack.setCardBackgroundColor(Color.parseColor(courses.get(position).getColor()));
 
         int imageId = context.getResources().getIdentifier(courses.get(position).getImg(), "drawable", context.getPackageName());

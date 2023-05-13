@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backCourseGoalSetting"
-    android:id="@+id/backCoursePage"
     tools:context=".Menu.Courses.CoursePage">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/backCoursePage">
 
     <ImageView
         android:id="@+id/imageCoursePage"
@@ -24,7 +29,7 @@
         android:id="@+id/titleCoursePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="370dp"
         android:gravity="center"
         android:text="@string/courseGoalSetting"
         android:textColor="@color/black"
@@ -32,21 +37,19 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCoursePage" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/courseBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="180dp"
         app:contentPaddingBottom="10dp"
         app:cardElevation="0dp"
         app:cardBackgroundColor="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="405dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleCoursePage">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -151,8 +154,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/courseBack" />
 
-
-
     <Button
         android:id="@+id/buttonAddCourse"
         android:layout_width="wrap_content"
@@ -161,7 +162,11 @@
         android:layout_weight="1"
         android:onClick="addToCart"
         android:text="@string/buttonAddCourse"
+        app:layout_constraintTop_toBottomOf="@+id/textCoursePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
